@@ -1,4 +1,4 @@
-﻿using Microsoft.Azure.EventHubs;
+﻿using Azure.Messaging.EventHubs;
 using Newtonsoft.Json;
 using System.Text;
 
@@ -8,7 +8,7 @@ namespace Amido.Stacks.Messaging.Azure.EventHub.Serializers
     {
         public T Read<T>(EventData eventData)
         {
-            var jsonBody = Encoding.UTF8.GetString(eventData.Body.Array);
+            var jsonBody = Encoding.UTF8.GetString(eventData.Body.ToArray());
             return JsonConvert.DeserializeObject<T>(jsonBody);
         }
     }
