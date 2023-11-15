@@ -1,6 +1,6 @@
 ﻿using Amido.Stacks.Messaging.Azure.EventHub.Serializers;
 using Amido.Stacks.Messaging.Events;
-using Microsoft.Azure.EventHubs;
+using Azure.Messaging.EventHubs;
 using Newtonsoft.Json;
 using Shouldly;
 using System;
